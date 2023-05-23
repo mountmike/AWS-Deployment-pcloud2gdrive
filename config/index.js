@@ -11,10 +11,13 @@ if (missing.length > 0) {
 module.exports = {
   port: process.env.PORT,
   db: {
-    host: process.env.DATABASE_URL,
-    user: process.env.PG_USERNAME,
-    password: process.env.PG_PASSWORD,
-    db: "pcloud2gdrive",
+    host: process.env.POSTGRESQL_DB_HOST,
+    user: process.env.POSTGRESQL_DB_USER,
+    password: process.env.POSTGRESQL_DB_PASSWORD,
+    db: process.env.POSTGRESQL_DB,
+    dialect: "postgres",
+    idleTimeoutMillis: 30000,
+    connectionTimeoutMillis: 3000,
   },
   gDriveAPI: {
     clientId: process.env.GDRIVE_CLIENT_ID,
