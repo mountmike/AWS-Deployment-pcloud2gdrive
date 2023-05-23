@@ -12,9 +12,9 @@ module.exports = {
   port: process.env.PORT,
   db: {
     host: process.env.DATABASE_URL,
-    user: "postgres",
+    username: "postgres",
     password: process.env.PG_PASSWORD,
-    db: "pcloud2gdrive",
+    dbname: "pcloud2gdrive",
     dialect: "postgres",
     idleTimeoutMillis: 30000,
     connectionTimeoutMillis: 3000
