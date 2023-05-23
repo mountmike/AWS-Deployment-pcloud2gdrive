@@ -18,17 +18,17 @@ app.use(express.static("public"))
 app.use(express.urlencoded({ extended: true }))
 app.use(require("./middlewares/method_override"))
 app.use(require("./middlewares/check_tokens"))
-// app.use(session({
-//   store: new pgSession({
-//     pool : db,                // Connection pool
-//     tableName: "session"
-//   }),
-//   secret: process.env.SESSION_SECRET || "godogsgo",
-//   resave: false,
-//   saveUninitialized: false,
-//   cookie: { maxAge: 30 * 24 * 60 * 60 * 1000 } // 30 days
-//   // Insert express-session options here
-// }));
+app.use(session({
+  store: new pgSession({
+    pool : db,                // Connection pool
+    tableName: "session"
+  }),
+  secret: process.env.SESSION_SECRET || "godogsgo",
+  resave: false,
+  saveUninitialized: false,
+  cookie: { maxAge: 30 * 24 * 60 * 60 * 1000 } // 30 days
+  // Insert express-session options here
+}));
 
 app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "public", "index.html"));
