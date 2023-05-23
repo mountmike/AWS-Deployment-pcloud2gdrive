@@ -12,11 +12,13 @@ module.exports = {
   port: process.env.PORT,
   db: {
     host: process.env.DATABASE_URL,
-    username: "postgres",
+    user: "postgres",
     port: 5432,
     password: process.env.PG_PASSWORD,
-    dbname: "pcloud2gdrive"
-
+    db: "pcloud2gdrive",
+    dialect: "postgres",
+    idleTimeoutMillis: 30000,
+    connectionTimeoutMillis: 3000
   },
   gDriveAPI: {
     clientId: process.env.GDRIVE_CLIENT_ID,
