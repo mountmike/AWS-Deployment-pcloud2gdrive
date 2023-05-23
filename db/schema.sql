@@ -22,4 +22,3 @@ ALTER TABLE "session" ADD CONSTRAINT "session_pkey" PRIMARY KEY ("sid") NOT DEFE
 CREATE INDEX "IDX_session_expire" ON "session" ("expire");
 
 
-psql --host=pcloud2gdrive.c6pvsca4qou8.ap-southeast-2.rds.amazonaws.com --port=5432  --username=postgres --password=puding123 --dbname=pcloud2gdrive
