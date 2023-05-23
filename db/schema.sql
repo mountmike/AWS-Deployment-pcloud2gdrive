@@ -14,16 +14,12 @@ CREATE TABLE "session" (
   "sess" json NOT NULL,
   "expire" timestamp(6) NOT NULL
 )
+
 WITH (OIDS=FALSE);
 
 ALTER TABLE "session" ADD CONSTRAINT "session_pkey" PRIMARY KEY ("sid") NOT DEFERRABLE INITIALLY IMMEDIATE;
 
 CREATE INDEX "IDX_session_expire" ON "session" ("expire");
 
-CREATE TABLE tasks (
-  id SERIAL PRIMARY KEY,
-  user_id TEXT,
-  task_name TEXT,
-  origin_folder TEXT,
-  destination_folder TEXT
-);
+
+psql --host=pcloud2gdrive.c6pvsca4qou8.ap-southeast-2.rds.amazonaws.com --port=5432  --username=postgres --dbname=pcloud2gdrive
