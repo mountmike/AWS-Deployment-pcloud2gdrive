@@ -14,7 +14,7 @@ module.exports = {
     host: process.env.DATABASE_URL,
     user: process.env.PG_USERNAME,
     password: process.env.PG_PASSWORD,
-    dbname: "pcloud2gdrive",
+    db: "pcloud2gdrive",
   },
   gDriveAPI: {
     clientId: process.env.GDRIVE_CLIENT_ID,
