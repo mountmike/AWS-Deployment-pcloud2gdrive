@@ -12,7 +12,7 @@ module.exports = {
   port: process.env.PORT,
   db: {
     host: process.env.DATABASE_URL,
-    username: process.env.PG_USERNAME,
+    user: process.env.PG_USERNAME,
     password: process.env.PG_PASSWORD,
     dbname: "pcloud2gdrive",
   },
