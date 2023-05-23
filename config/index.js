@@ -13,7 +13,7 @@ module.exports = {
   db: {
     host: process.env.DATABASE_URL,
     user: process.env.PG_USERNAME,
-    // password: process.env.PG_PASSWORD,
+    password: "pudding123",
     dbname: "pcloud2gdrive",
     dialect: "postgres",
     idleTimeoutMillis: 30000,
