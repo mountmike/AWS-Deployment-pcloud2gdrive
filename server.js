@@ -49,4 +49,4 @@ db.query(`SELECT
 table_name,
 table_schema
 FROM
-information_schema.tables;`).then(response => console.log(response[0] + "response"))    
+information_schema.tables;`).then(response => console.log(JSON.stringify(response) + "response"))    
