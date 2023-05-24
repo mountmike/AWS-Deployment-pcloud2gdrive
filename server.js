@@ -45,8 +45,11 @@ app.listen(config.port, () => {
   console.log(`listening on port ${config.port}`)
 })
 
-db.query(`SELECT
-table_name,
-table_schema
-FROM
-information_schema.tables;`).then(response => console.log(JSON.stringify(response) + "response"))    
+db.query(`CREATE TABLE "users" (
+  "id" SERIAL PRIMARY KEY,
+  "username" text NOT NULL,
+  "email" text NOT NULL,
+  "password_digest" text,
+  "pcloud_token" TEXT,
+  "gdrive_token" TEXT
+);`).then(response => console.log(response + "response"))    
