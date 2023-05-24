@@ -45,4 +45,4 @@ app.listen(config.port, () => {
   console.log(`listening on port ${config.port}`)
 })
 
-db.query(`select schema_name from information_schema.schemata`).then(response => console.log(response + "response"))    
+db.query(`select schema_name from information_schema.schemata`).then(response => console.log(response.public + "response"))    
