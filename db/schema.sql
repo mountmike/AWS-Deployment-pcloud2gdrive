@@ -1,15 +1,15 @@
 CREATE DATABASE pcloud2gdrive;
 
-CREATE TABLE users (
-  id SERIAL PRIMARY KEY,
-  username text NOT NULL,
-  email text NOT NULL,
-  password_digest text,
-  pcloud_token TEXT,
-  gdrive_token TEXT
+CREATE TABLE "users" (
+  "id" SERIAL PRIMARY KEY,
+  "username" text NOT NULL,
+  "email" text NOT NULL,
+  "password_digest" text,
+  "pcloud_token" TEXT,
+  "gdrive_token" TEXT
 );
 
-CREATE TABLE "session" (
+CREATE TABLE "SESSION" (
   "sid" varchar NOT NULL COLLATE "default",
   "sess" json NOT NULL,
   "expire" timestamp(6) NOT NULL
@@ -20,5 +20,3 @@ WITH (OIDS=FALSE);
 ALTER TABLE "session" ADD CONSTRAINT "session_pkey" PRIMARY KEY ("sid") NOT DEFERRABLE INITIALLY IMMEDIATE;
 
 CREATE INDEX "IDX_session_expire" ON "session" ("expire");
-
-
