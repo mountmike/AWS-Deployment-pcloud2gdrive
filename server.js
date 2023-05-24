@@ -21,7 +21,7 @@ app.use(require("./middlewares/check_tokens"))
 app.use(session({
   store: new pgSession({
     pool : db,                // Connection pool
-    tableName: "SESSION"
+    tableName: "session"
   }),
   secret: process.env.SESSION_SECRET || "godogsgo",
   resave: false,
