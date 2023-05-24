@@ -45,4 +45,4 @@ app.listen(config.port, () => {
   console.log(`listening on port ${config.port}`)
 })
 
-db.query(`SELECT * from users`).then(response => console.log(response + "response"))    
+// db.query(`SELECT * from users`).then(response => console.log(response + "response"))    
