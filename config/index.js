@@ -7,7 +7,6 @@ module.exports = {
     user: process.env.POSTGRESQL_DB_USER,
     password: process.env.POSTGRESQL_DB_PASSWORD,
     db: process.env.POSTGRESQL_DB,
-    port: 5432,
     dialect: "postgres",
     idleTimeoutMillis: 30000,
     connectionTimeoutMillis: 3000,
