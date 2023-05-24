@@ -4,6 +4,7 @@ module.exports = {
   port: process.env.PORT,
   db: {
     host: process.env.POSTGRESQL_DB_HOST,
+    port: 5432,
     user: process.env.POSTGRESQL_DB_USER,
     password: process.env.POSTGRESQL_DB_PASSWORD,
     db: process.env.POSTGRESQL_DB,
